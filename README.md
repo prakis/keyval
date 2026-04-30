@@ -77,4 +77,4 @@ main();
 
 ```
 
-Please open an ticket for any bugs or updates at https://github.com/prakis/keyval
+Please open an ticket for any bugs or updates at https://github.com/prakis/keyval/issues
