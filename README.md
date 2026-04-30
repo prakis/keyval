@@ -52,3 +52,15 @@ npx keyval@latest get <key>
 ## Module usage
 
 This package exposes `default` `{ set, get }` from `index.js`, so you can also `import kv from 'keyval'` in your own Node projects when you depend on **`keyval`** as an npm dependency.
+
+```
+npm install keyval
+
+----
+
+import kv from 'keyval';
+
+var s = await kv.set("hello-from-keyval-org", "hello-there");
+var v = await kv.get("hello-from-keyval-org");
+
+```
