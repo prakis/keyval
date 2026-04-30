@@ -18,8 +18,10 @@ npx keyval set <key> <value>
 
 Example:
 
+* Suggest to have the key atleast 10 character long
+
 ```bash
-npx keyval set myKey "hello world"
+npx keyval set my-10-plus-char-key "hello world"
 ```
 
 ### Get a value
@@ -31,7 +33,7 @@ npx keyval get <key>
 Example:
 
 ```bash
-npx keyval get myKey
+npx keyval get my-10-plus-char-key
 ```
 
 The CLI prints a success summary for `set`, and prints the stored value line for `get`. If something goes wrong, you’ll see an error message on stderr and a non-zero exit code.
@@ -58,9 +60,21 @@ npm install keyval
 
 ----
 
-import kv from 'keyval';
+import kv from "keyval";
 
-var s = await kv.set("hello-from-keyval-org", "hello-there");
-var v = await kv.get("hello-from-keyval-org");
+const s = await kv.set("hello-from-keyval-org", "hello-there");
+const v = await kv.get("hello-from-keyval-org");
+console.log(v);
+
+OR
+
+async function main() {
+  const s = await kv.set("hello-from-keyval-org", "hello-there");
+  const v = await kv.get("hello-from-keyval-org");
+  console.log(v);
+}
+main();
 
 ```
+
+Please open an ticket for any bugs or updates at https://github.com/prakis/keyval
