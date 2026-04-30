@@ -1,39 +1,47 @@
 # keyval
 
-A small command-line helper for storing and retrieving key–value pairs through the **[keyval.org](https://www.keyval.org)** API—no global install needed if you use `npx`.
+A small command-line helper for storing and retrieving key–value pairs through the **[keyval.org](https://www.keyval.org)** API.
 
 ## Requirements
 
 - [Node.js](https://nodejs.org/) (recommended: current LTS or newer)
 
-## CLI usage with `npx`
+## Running the CLI
 
-You can run **`keyval`** without installing it in your project by using **`npx`**:
+You can run **`keyval`** CLI in two ways.
 
-### Set a value
+### 1. Recommended: `npx` (no install)
+
+This is the recommended approach: use **`npx`** so you **do not** install a global module. npm fetches and runs the CLI when you need it.
+
+**Set a value**
 
 ```bash
 npx keyval set <key> <value>
 ```
 
-Example:
-
-* Suggest to have the key atleast 10 character long
-
-```bash
-npx keyval set my-10-plus-char-key "hello world"
-```
-
-### Get a value
+**Get a value**
 
 ```bash
 npx keyval get <key>
 ```
 
-Example:
+Example (suggest using a key at least 10 characters long):
 
 ```bash
+npx keyval set my-10-plus-char-key "hello world"
 npx keyval get my-10-plus-char-key
+```
+
+### 2. Global install (Other Option)
+
+Install the package once, then run **`keyval`** directly (no **`npx`**):
+
+```bash
+npm i -g keyval
+
+keyval set <key> <value>
+keyval get <key>
 ```
 
 The CLI prints a success summary for `set`, and prints the stored value line for `get`. If something goes wrong, you’ll see an error message on stderr and a non-zero exit code.
@@ -77,4 +85,4 @@ main();
 
 ```
 
-Please open an ticket for any bugs or updates at https://github.com/prakis/keyval/issues
+Please open a ticket for any bugs or updates at https://github.com/prakis/keyval/issues
