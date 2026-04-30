@@ -1,0 +1,26 @@
+{
+  "name": "keyval",
+  "version": "2.1.0",
+  "description": "A simple keyval db",
+  "type": "module",
+  "main": "index.js",
+  "bin": {
+    "keyval": "./cli.js"
+  },
+  "scripts": {
+    "test": "node --test index.test.js cli.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/prakis/keyval.git"
+  },
+  "author": "Kishore",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/prakis/keyval"
+  },
+  "homepage": "https://www.keyval.org",
+  "keywords": [
+    "Key-value", "key-value database"
+  ]  
+}

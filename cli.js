@@ -24,8 +24,8 @@ async function run() {
             }
         } else {
             console.log("Usage:");
-            console.log("  keyval set <key> <value>");
-            console.log("  keyval get <key>");
+            console.log(" npx keyval set <key> <value>");
+            console.log(" npx keyval get <key>");
         }
     } catch (error) {
         console.error("Error:", error.message);
